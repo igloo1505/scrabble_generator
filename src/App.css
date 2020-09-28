@@ -1,0 +1,105 @@
+:root {
+  --primary: #82cce7;
+  --secondary: #55aab1;
+}
+
+.App {
+  text-align: center;
+}
+
+.outerContainer {
+  display: flex;
+  flex-direction: row;
+  max-width: min(1200px, 80vw);
+  margin: auto;
+  border: 1px solid red;
+}
+
+.layoutContainer {
+  margin-right: 50px;
+  flex: 3;
+  background-color: pink;
+}
+
+.formContainer {
+  margin-left: 50px;
+  flex: 1;
+  border: 1px solid blue
+}
+
+.wordsContainer {
+  margin-top: 0px;
+  min-height: 200px;
+  border: 1px solid orange;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+.add-word-btn {
+  float: right;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  background-color: var(--primary)
+}
+
+.add-word-btn:hover {
+  background-color: var(--secondary) !important;
+}
+
+.wordTag {
+  margin: 10px 10px 10px 10px;
+  width: fit-content;
+  min-width: fit-content;
+}
+
+.closeIcon {
+  cursor: pointer;
+  float: right;
+  font-size: 16px;
+  line-height: 32px;
+  padding-left: 8px;
+}
+
+input:focus {
+  border-bottom: 1px solid var(--primary) !important;
+  box-shadow: 0 1px 0 0 var(--primary) !important;
+}
+
+label.active {
+  color: var(--primary) !important;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .outerContainer {
+    display: inline-block;
+    max-width: min(1200px, 80vw);
+    margin: auto;
+    border: 1px solid red;
+  }
+
+  .layoutContainer {
+    margin-right: 0px;
+    display: block;
+    width: 100%;
+    background-color: pink;
+    min-height: 300px;
+  }
+
+  .formContainer {
+    margin-left: 0px;
+    display: block;
+    width: 100%;
+    border: 1px solid blue
+  }
+
+  .add-word-btn {
+    float: initial;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 30px;
+  }
+}
